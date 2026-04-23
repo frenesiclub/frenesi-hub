@@ -14,9 +14,8 @@ html,body{height:100%;}
 body{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);font-size:14px;line-height:1.5;}
 .screen{display:none;}.screen.active{display:block;}
 
-/* LOGIN */
 .lw{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden;}
-.lbs{position:absolute;font-size:220px;opacity:0.02;pointer-events:none;user-select:none;font-family:sans-serif;}
+.lbs{position:absolute;font-size:220px;opacity:0.02;pointer-events:none;user-select:none;}
 .lb{width:100%;max-width:400px;background:var(--gy);border:0.5px solid var(--bo);border-radius:20px;padding:2.5rem 2rem;text-align:center;position:relative;z-index:1;}
 .ll{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:6px;line-height:1;}
 .ls2{font-size:10px;letter-spacing:6px;color:var(--mu);text-transform:uppercase;margin-bottom:2rem;}
@@ -35,7 +34,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);font-
 .btn.wpp{background:#25d366;color:#fff;}
 .errmsg{color:var(--re);font-size:12px;margin-top:0.5rem;min-height:18px;}
 
-/* NAV */
 .nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.97);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--bo);display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1.5rem;}
 .nlogo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;}
 .nlogo span{font-size:10px;letter-spacing:2px;color:var(--go);font-family:'DM Sans',sans-serif;margin-left:6px;vertical-align:middle;}
@@ -46,7 +44,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);font-
 .radmin{background:var(--go);color:var(--bk);}
 .ruser{background:var(--gy2);color:var(--mu);border:0.5px solid var(--bo);}
 
-/* MAIN */
 .main{padding:1.5rem;max-width:980px;margin:0 auto;}
 .stitle{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;margin-bottom:1.25rem;}
 .card{background:var(--gy);border:0.5px solid var(--bo);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1rem;}
@@ -56,8 +53,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);font-
 .fl{font-size:10px;color:var(--mu);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;display:block;}
 .ff{display:flex;flex-direction:column;}
 .ff .fi{margin-bottom:0;}
-
-/* TABLE */
 .tw{overflow-x:auto;margin-bottom:0.75rem;}
 .it{width:100%;border-collapse:collapse;font-size:13px;min-width:520px;}
 .it th{text-align:left;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);padding:0.5rem;border-bottom:0.5px solid var(--bo);}
@@ -78,8 +73,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);font-
 .db:hover{background:rgba(208,64,64,0.1);}
 .ir{display:flex;gap:6px;align-items:center;font-size:11px;color:var(--mu);margin-bottom:0.75rem;}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--go);flex-shrink:0;}
-
-/* ADMIN */
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0.75rem;margin-bottom:1.25rem;}
 .pc{background:var(--gy2);border:0.5px solid var(--bo);border-radius:12px;padding:1rem;transition:border-color 0.2s;}
 .pc:hover{border-color:var(--bh);}
@@ -95,99 +88,91 @@ body{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);font-
 .pc2{display:flex;flex-direction:column;}
 .pq{font-size:9px;color:var(--go);margin-bottom:3px;text-align:center;letter-spacing:1px;}
 .pc2 .fi{text-align:center;padding:0.55rem 0.25rem;margin-bottom:0;}
-
-/* TOAST */
 .toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--gy2);border:0.5px solid var(--bh);border-radius:12px;padding:0.8rem 1.25rem;font-size:13px;z-index:9999;opacity:0;transform:translateY(8px);transition:all 0.3s;pointer-events:none;max-width:280px;}
 .toast.show{opacity:1;transform:translateY(0);}
 hr{border:none;border-top:0.5px solid var(--bo);margin:1.25rem 0;}
 @media(max-width:500px){.main{padding:1rem;}.nav{padding:0.7rem 1rem;}.tnum{font-size:28px;}.stitle{font-size:22px;}}
 
-/* ═══════════════════════════════
-   PDF OVERLAY
-═══════════════════════════════ */
-.pov{position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:500;display:flex;align-items:center;justify-content:center;padding:1rem;}
+/* ═══ PDF OVERLAY (só UI, não imprime) ═══ */
+.pov{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:500;display:flex;align-items:center;justify-content:center;padding:1rem;}
 .pov.hidden{display:none;}
-.pmo{background:var(--bk);border-radius:16px;width:100%;max-width:700px;max-height:92vh;overflow-y:auto;position:relative;border:0.5px solid var(--bo);}
-.pcl{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.08);border:none;border-radius:50%;width:32px;height:32px;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--wh);z-index:10;}
-.pac{padding:1rem 1.5rem;background:var(--gy);border-radius:0 0 16px 16px;display:flex;gap:0.75rem;justify-content:flex-end;border-top:0.5px solid var(--bo);}
-.ppb{background:var(--go);color:var(--bk);border:none;border-radius:8px;padding:0.65rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:0.5px;}
-.pcb{background:transparent;border:0.5px solid var(--bo);color:var(--wh);border-radius:8px;padding:0.65rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;}
+.pmo{background:#EBEBEA;border-radius:16px;width:100%;max-width:680px;max-height:92vh;overflow-y:auto;position:relative;}
+.pcl{position:absolute;top:1rem;right:1rem;background:rgba(0,0,0,0.1);border:none;border-radius:50%;width:32px;height:32px;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#333;z-index:10;}
+.pac{padding:1rem 1.5rem;background:#dddcda;border-radius:0 0 16px 16px;display:flex;gap:0.75rem;justify-content:flex-end;border-top:1px solid #ccc;}
+.ppb{background:#0a0a0a;color:#f0ede6;border:none;border-radius:8px;padding:0.65rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:0.5px;}
+.pcb{background:transparent;border:1px solid #bbb;color:#555;border-radius:8px;padding:0.65rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;}
 
-/* ═══════════════════════════════
-   PDF DOCUMENT — dark brand
-═══════════════════════════════ */
-#pdfdoc{font-family:'DM Sans',sans-serif;background:var(--bk);color:var(--wh);}
+/* ═══ PDF DOCUMENT — catálogo style ═══ */
+#pdfdoc{font-family:'DM Sans',sans-serif;}
 
-.pdf-page{background:#0a0a0a;min-height:100%;}
-
-/* header */
-.ph{background:#0a0a0a;padding:2.5rem 2.5rem 2rem;border-bottom:1px solid #1e1e1e;position:relative;overflow:hidden;}
+/* header cinza claro estilo catálogo */
+.ph{background:#EBEBEA;padding:2.5rem 2.5rem 2rem;position:relative;overflow:hidden;}
 .ph-top{display:flex;align-items:flex-start;justify-content:space-between;}
-.ph-logo{font-family:'Bebas Neue',sans-serif;font-size:60px;letter-spacing:8px;color:#f0ede6;line-height:0.9;}
-.ph-club{font-size:10px;letter-spacing:7px;color:var(--go);text-transform:uppercase;margin-top:6px;}
-.ph-tag{font-size:9px;letter-spacing:3px;color:#444;text-transform:uppercase;margin-top:3px;}
+.ph-logo{font-family:'Bebas Neue',sans-serif;font-size:58px;letter-spacing:7px;color:#0a0a0a;line-height:0.9;}
+.ph-club{font-size:9px;letter-spacing:8px;color:#888;text-transform:uppercase;margin-top:8px;}
+.ph-tag{font-size:8px;letter-spacing:3px;color:#bbb;text-transform:uppercase;margin-top:3px;}
 .ph-right{text-align:right;}
-.ph-cotlabel{font-size:9px;letter-spacing:2px;color:#555;text-transform:uppercase;margin-bottom:4px;}
-.ph-cotnum{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:var(--go);}
-.ph-date{font-size:11px;color:#555;margin-top:4px;}
-.ph-star{position:absolute;font-size:300px;opacity:0.015;right:-40px;top:-80px;color:#fff;user-select:none;line-height:1;}
-.ph-line{height:2px;background:linear-gradient(90deg,var(--go) 0%,#f0ede6 50%,var(--go) 100%);margin-top:2rem;}
+.ph-cotlabel{font-size:8px;letter-spacing:2px;color:#aaa;text-transform:uppercase;margin-bottom:4px;}
+.ph-cotnum{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:#c8a96e;}
+.ph-date{font-size:10px;color:#aaa;margin-top:4px;}
+.ph-star-deco{position:absolute;right:2.5rem;top:50%;transform:translateY(-50%);font-size:180px;opacity:0.04;color:#000;user-select:none;pointer-events:none;line-height:1;}
+.ph-line{height:1px;background:linear-gradient(90deg,#c8a96e,#0a0a0a 40%,#0a0a0a 60%,#c8a96e);margin-top:1.5rem;opacity:0.3;}
 
 /* body */
-.pb{padding:2rem 2.5rem;}
-
-.ps{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#444;border-bottom:1px solid #1a1a1a;padding-bottom:8px;margin-bottom:1.25rem;}
+.pb{padding:2rem 2.5rem;background:#EBEBEA;}
+.ps{font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:#aaa;border-bottom:1px solid #d5d5d3;padding-bottom:8px;margin-bottom:1.25rem;}
 
 .pcg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;}
 .pcf{display:flex;flex-direction:column;gap:4px;}
-.pfl{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#555;}
-.pfv{font-size:14px;font-weight:500;color:#f0ede6;}
+.pfl{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#aaa;}
+.pfv{font-size:14px;font-weight:500;color:#111;}
 
-/* items table */
+/* tabela */
 .pit{width:100%;border-collapse:collapse;margin-bottom:2rem;}
-.pit thead tr{background:#111;}
-.pit th{text-align:left;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#555;padding:0.65rem 0.75rem;border-bottom:1px solid #1a1a1a;}
-.pit td{padding:0.75rem 0.75rem;border-bottom:1px solid #141414;vertical-align:top;}
-.pit tr:last-child td{border-bottom:none;}
-.pit .odd td{background:#0d0d0d;}
-.pit .even td{background:#0a0a0a;}
-.pit-sku{font-size:9px;letter-spacing:1.5px;color:var(--go);text-transform:uppercase;margin-bottom:3px;}
-.pit-name{font-size:13px;font-weight:500;color:#f0ede6;}
-.pit-obs{font-size:11px;color:#555;margin-top:3px;}
-.pit-right{text-align:right;color:#f0ede6;font-weight:500;}
-.pit-num{text-align:center;color:#444;}
+.pit thead tr{background:#e0dfdd;}
+.pit th{text-align:left;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#999;padding:0.65rem 0.75rem;border-bottom:1px solid #d0cfcd;}
+.pit td{padding:0.75rem 0.75rem;border-bottom:1px solid #dddcda;vertical-align:top;}
+.pit .rowodd td{background:#e8e7e5;}
+.pit .roweven td{background:#EBEBEA;}
+.pit-sku{font-size:8px;letter-spacing:1.5px;color:#c8a96e;text-transform:uppercase;margin-bottom:3px;}
+.pit-name{font-size:13px;font-weight:500;color:#111;}
+.pit-obs{font-size:11px;color:#999;margin-top:3px;font-style:italic;}
+.pit-right{text-align:right;color:#111;font-weight:600;}
+.pit-num{text-align:center;color:#bbb;font-size:12px;}
+.pit-qty{text-align:center;color:#333;}
 
-/* total box */
-.ptb{background:#111;border:1px solid #1e1e1e;border-radius:12px;padding:1.5rem 1.75rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;}
-.ptb-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#555;margin-bottom:4px;}
+/* total */
+.ptb{background:#0a0a0a;border-radius:12px;padding:1.5rem 1.75rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;}
+.ptb-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#555;margin-bottom:4px;}
 .ptb-count{font-size:11px;color:#444;}
-.ptb-val{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:3px;color:var(--go);line-height:1;}
+.ptb-val{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:3px;color:#c8a96e;line-height:1;}
 
-/* validity */
-.pval{background:#0d0d0d;border:1px solid #1a1a1a;border-left:3px solid var(--go);border-radius:0 8px 8px 0;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:11px;color:#555;line-height:1.7;}
-.pval strong{color:#888;}
+/* validade */
+.pval{background:#e4e3e1;border-left:3px solid #c8a96e;border-radius:0 6px 6px 0;padding:0.75rem 1rem;margin-bottom:1.25rem;font-size:11px;color:#777;line-height:1.7;}
+.pval strong{color:#555;}
 
 /* obs */
-.pobs{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:8px;padding:0.85rem 1rem;margin-bottom:2rem;font-size:11px;color:#555;line-height:1.7;}
-.pobs strong{color:#888;display:block;margin-bottom:3px;}
+.pobs{background:#e4e3e1;border-radius:8px;padding:0.85rem 1rem;margin-bottom:2rem;font-size:11px;color:#777;line-height:1.7;}
+.pobs strong{color:#555;display:block;margin-bottom:3px;}
 
 /* footer */
-.pft{background:#111;padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;border-top:1px solid #1a1a1a;}
+.pft{background:#0a0a0a;padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
 .pft-brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;color:#f0ede6;}
-.pft-sub{font-size:9px;color:#444;letter-spacing:1px;margin-top:2px;}
-.pft-contact{text-align:right;font-size:11px;color:#555;line-height:2;}
-.pft-insta{color:var(--go);font-weight:600;}
+.pft-sub{font-size:8px;color:#444;letter-spacing:1.5px;margin-top:3px;text-transform:uppercase;}
+.pft-contact{text-align:right;line-height:2;}
+.pft-insta{color:#c8a96e;font-size:12px;font-weight:600;letter-spacing:0.5px;}
+.pft-site{color:#555;font-size:10px;}
+.pft-stars{text-align:center;padding:1rem;font-size:11px;letter-spacing:8px;color:#ccc;background:#EBEBEA;}
 
-/* star deco bottom */
-.psd{text-align:center;padding:1rem;font-size:11px;letter-spacing:8px;color:#1e1e1e;}
-
+/* ═══ PRINT — isola só o documento ═══ */
 @media print{
-  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  body{background:#0a0a0a;}
-  .pov{position:static;background:none;padding:0;}
-  .pmo{max-height:none;border-radius:0;border:none;}
-  .pac,.pcl{display:none!important;}
-  @page{margin:0;size:A4;}
+  html,body{background:#EBEBEA!important;margin:0;padding:0;}
+  body > *:not(#print-target){display:none!important;}
+  #print-target{display:block!important;position:static!important;}
+  #print-target .pac,#print-target .pcl{display:none!important;}
+  #print-target .pmo{max-height:none!important;border-radius:0!important;overflow:visible!important;}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  @page{margin:0;size:A4 portrait;}
 }
 </style>
 </head>
@@ -195,7 +180,14 @@ hr{border:none;border-top:0.5px solid var(--bo);margin:1.25rem 0;}
 
 <div id="toast" class="toast"></div>
 
-<!-- PDF OVERLAY -->
+<!-- PRINT TARGET (só aparece no print) -->
+<div id="print-target" style="display:none">
+  <div class="pmo" style="border-radius:0;max-height:none">
+    <div id="pdfdoc-print"></div>
+  </div>
+</div>
+
+<!-- PDF OVERLAY (preview na tela) -->
 <div class="pov hidden" id="pov">
   <div class="pmo">
     <button class="pcl" onclick="closePdf()">✕</button>
@@ -320,248 +312,137 @@ hr{border:none;border-top:0.5px solid var(--bo);margin:1.25rem 0;}
 </div>
 
 <script>
-// ── CONFIG ─────────────────────────────
-const PASS_ADMIN = '1234';
-const PASS_USER  = 'frenesi';
-const INSTA      = '@frenesiclub_';
-const SITE       = 'frenesiclub.com.br';
-
-// ── PRODUTOS PADRÃO ────────────────────
-const DPRODS = [
-  {sku:'BRB32', nome:'Botton Redondo Broche 32mm',        cat:'Broche',          tam:'32mm', prices:{1:9.90, 3:9.11, 5:7.92, 10:7.52, 50:5.94,100:5.15}},
-  {sku:'BRB44', nome:'Botton Redondo Broche 44mm',        cat:'Broche',          tam:'44mm', prices:{1:10.25,3:9.43, 5:8.20, 10:7.79, 50:6.15,100:5.33}},
-  {sku:'BRB58', nome:'Botton Redondo Broche 58mm',        cat:'Broche',          tam:'58mm', prices:{1:10.73,3:9.87, 5:8.58, 10:8.15, 50:6.44,100:5.58}},
-  {sku:'BRC32', nome:'Botton Redondo Chaveiro 32mm',      cat:'Chaveiro',        tam:'32mm', prices:{1:10.88,3:10.00,5:8.70, 10:8.26, 50:6.53,100:5.65}},
-  {sku:'BRC44', nome:'Botton Redondo Chaveiro 44mm',      cat:'Chaveiro',        tam:'44mm', prices:{1:11.25,3:10.35,5:9.00, 10:8.55, 50:6.75,100:5.85}},
-  {sku:'BRC58', nome:'Botton Redondo Chaveiro 58mm',      cat:'Chaveiro',        tam:'58mm', prices:{1:11.72,3:10.79,5:9.38, 10:8.91, 50:7.03,100:6.10}},
-  {sku:'BRE58', nome:'Botton Espelho Redondo 58mm',       cat:'Espelho',         tam:'58mm', prices:{1:16.32,3:15.02,5:13.06,10:12.41,50:9.79,100:8.49}},
-  {sku:'BRCE58',nome:'Botton Chaveiro Espelho 58mm',      cat:'Chaveiro Espelho',tam:'58mm', prices:{1:17.33,3:15.94,5:13.86,10:13.17,50:10.40,100:9.01}},
-  {sku:'BQI55', nome:'Botton Quadrado Imã 55mm',          cat:'Imã',             tam:'55mm', prices:{1:5.75, 3:5.29, 5:4.60, 10:4.37, 50:3.45,100:2.99}},
+const PASS_ADMIN='1234', PASS_USER='frenesi';
+const INSTA='@frenesiclub_', SITE='frenesiclub.com.br';
+const DPRODS=[
+  {sku:'BRB32',nome:'Botton Redondo Broche 32mm',cat:'Broche',tam:'32mm',prices:{1:9.90,3:9.11,5:7.92,10:7.52,50:5.94,100:5.15}},
+  {sku:'BRB44',nome:'Botton Redondo Broche 44mm',cat:'Broche',tam:'44mm',prices:{1:10.25,3:9.43,5:8.20,10:7.79,50:6.15,100:5.33}},
+  {sku:'BRB58',nome:'Botton Redondo Broche 58mm',cat:'Broche',tam:'58mm',prices:{1:10.73,3:9.87,5:8.58,10:8.15,50:6.44,100:5.58}},
+  {sku:'BRC32',nome:'Botton Redondo Chaveiro 32mm',cat:'Chaveiro',tam:'32mm',prices:{1:10.88,3:10.00,5:8.70,10:8.26,50:6.53,100:5.65}},
+  {sku:'BRC44',nome:'Botton Redondo Chaveiro 44mm',cat:'Chaveiro',tam:'44mm',prices:{1:11.25,3:10.35,5:9.00,10:8.55,50:6.75,100:5.85}},
+  {sku:'BRC58',nome:'Botton Redondo Chaveiro 58mm',cat:'Chaveiro',tam:'58mm',prices:{1:11.72,3:10.79,5:9.38,10:8.91,50:7.03,100:6.10}},
+  {sku:'BRE58',nome:'Botton Espelho Redondo 58mm',cat:'Espelho',tam:'58mm',prices:{1:16.32,3:15.02,5:13.06,10:12.41,50:9.79,100:8.49}},
+  {sku:'BRCE58',nome:'Botton Chaveiro Espelho 58mm',cat:'Chaveiro Espelho',tam:'58mm',prices:{1:17.33,3:15.94,5:13.86,10:13.17,50:10.40,100:9.01}},
+  {sku:'BQI55',nome:'Botton Quadrado Imã 55mm',cat:'Imã',tam:'55mm',prices:{1:5.75,3:5.29,5:4.60,10:4.37,50:3.45,100:2.99}},
 ];
 
-let prods=[], role='', lmode='admin', rc=0;
-
+let prods=[],role='',lmode='admin',rc=0;
 function lp(){try{const s=localStorage.getItem('fr_p');prods=s?JSON.parse(s):JSON.parse(JSON.stringify(DPRODS));}catch(e){prods=JSON.parse(JSON.stringify(DPRODS));}}
 function sp(){try{localStorage.setItem('fr_p',JSON.stringify(prods));}catch(e){}}
-
-// cotação sequencial
-function getCotNum(){
-  let n=parseInt(localStorage.getItem('fr_cotn')||'0')+1;
-  localStorage.setItem('fr_cotn',n);
-  return 'COT-'+String(n).padStart(4,'0');
-}
-
+function getCotNum(){let n=parseInt(localStorage.getItem('fr_cotn')||'0')+1;localStorage.setItem('fr_cotn',n);return'COT-'+String(n).padStart(4,'0');}
 lp();
 
 function f(n){return'R$ '+Number(n).toFixed(2).replace('.',',');}
 function gp(p,q){if(!p)return 0;for(const t of[100,50,10,5,3,1]){if(q>=t&&p.prices[t]>0)return p.prices[t];}return p.prices[1]||0;}
 function gt2(q){if(q>=100)return'×100';if(q>=50)return'×50';if(q>=10)return'×10';if(q>=5)return'×5';if(q>=3)return'×3';return'×1';}
-function td(){const d=new Date();return d.toLocaleDateString('pt-BR');}
+function td(){return new Date().toLocaleDateString('pt-BR');}
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
 
-// LOGIN
 function setMode(m){lmode=m;document.querySelectorAll('.ltab').forEach((b,i)=>b.classList.toggle('active',(i===0&&m==='admin')||(i===1&&m==='user')));}
-function doLogin(){
-  const v=document.getElementById('lp').value,e=document.getElementById('le');
-  e.textContent='';
-  if(lmode==='admin'&&v===PASS_ADMIN){role='admin';openApp();}
-  else if(lmode==='user'&&v===PASS_USER){role='user';openApp();}
-  else{e.textContent='Senha incorreta.';}
-}
+function doLogin(){const v=document.getElementById('lp').value,e=document.getElementById('le');e.textContent='';if(lmode==='admin'&&v===PASS_ADMIN){role='admin';openApp();}else if(lmode==='user'&&v===PASS_USER){role='user';openApp();}else{e.textContent='Senha incorreta.';}}
 document.getElementById('lp').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
-function openApp(){
-  document.getElementById('s-login').classList.remove('active');
-  document.getElementById('s-app').classList.add('active');
-  const b=document.getElementById('rbadge');
-  b.textContent=role==='admin'?'Admin':'Cotação';
-  b.className='rbadge '+(role==='admin'?'radmin':'ruser');
-  document.getElementById('nt-adm').style.display=role==='admin'?'':'none';
-  tab('cot');
-  if(document.getElementById('ib').children.length===0)addRow();
-}
-function logout(){
-  document.getElementById('s-app').classList.remove('active');
-  document.getElementById('s-login').classList.add('active');
-  document.getElementById('lp').value='';
-  document.getElementById('le').textContent='';
-  role='';
-}
-function tab(t){
-  document.getElementById('t-cot').style.display=t==='cot'?'':'none';
-  document.getElementById('t-adm').style.display=t==='adm'?'':'none';
-  document.getElementById('nt-cot').classList.toggle('active',t==='cot');
-  document.getElementById('nt-adm').classList.toggle('active',t==='adm');
-  if(t==='adm')renderProds();
-}
+function openApp(){document.getElementById('s-login').classList.remove('active');document.getElementById('s-app').classList.add('active');const b=document.getElementById('rbadge');b.textContent=role==='admin'?'Admin':'Cotação';b.className='rbadge '+(role==='admin'?'radmin':'ruser');document.getElementById('nt-adm').style.display=role==='admin'?'':'none';tab('cot');if(document.getElementById('ib').children.length===0)addRow();}
+function logout(){document.getElementById('s-app').classList.remove('active');document.getElementById('s-login').classList.add('active');document.getElementById('lp').value='';document.getElementById('le').textContent='';role='';}
+function tab(t){document.getElementById('t-cot').style.display=t==='cot'?'':'none';document.getElementById('t-adm').style.display=t==='adm'?'':'none';document.getElementById('nt-cot').classList.toggle('active',t==='cot');document.getElementById('nt-adm').classList.toggle('active',t==='adm');if(t==='adm')renderProds();}
 
-// ROWS
 function skuOpts(){return'<option value="">Selecionar produto...</option>'+prods.map(p=>`<option value="${p.sku}">${p.sku} — ${p.cat} ${p.tam}</option>`).join('');}
-function addRow(){
-  rc++;
-  const id='r'+rc,tb=document.getElementById('ib'),tr=document.createElement('tr');
-  tr.id=id;
-  tr.innerHTML=`<td><select class="ss" onchange="rch('${id}')">${skuOpts()}</select></td><td><input class="qi" type="number" min="1" value="1" onchange="rch('${id}')" oninput="rch('${id}')"></td><td><input class="oi" type="text" placeholder="Arte, cor, texto..."></td><td><div class="pd" id="${id}u">—</div><div class="pt" id="${id}t"></div></td><td><div class="pd" id="${id}T">—</div></td><td><button class="db" onclick="delR('${id}')">✕</button></td>`;
-  tb.appendChild(tr);calc();
-}
-function rch(id){
-  const tr=document.getElementById(id),sku=tr.querySelector('.ss').value,q=Math.max(1,parseInt(tr.querySelector('.qi').value)||1),p=prods.find(x=>x.sku===sku),pu=gp(p,q);
-  document.getElementById(id+'u').textContent=p?f(pu):'—';
-  document.getElementById(id+'t').textContent=p?gt2(q):'';
-  document.getElementById(id+'T').textContent=p?f(pu*q):'—';
-  calc();
-}
+function addRow(){rc++;const id='r'+rc,tb=document.getElementById('ib'),tr=document.createElement('tr');tr.id=id;tr.innerHTML=`<td><select class="ss" onchange="rch('${id}')">${skuOpts()}</select></td><td><input class="qi" type="number" min="1" value="1" onchange="rch('${id}')" oninput="rch('${id}')"></td><td><input class="oi" type="text" placeholder="Arte, cor, texto..."></td><td><div class="pd" id="${id}u">—</div><div class="pt" id="${id}t"></div></td><td><div class="pd" id="${id}T">—</div></td><td><button class="db" onclick="delR('${id}')">✕</button></td>`;tb.appendChild(tr);calc();}
+function rch(id){const tr=document.getElementById(id),sku=tr.querySelector('.ss').value,q=Math.max(1,parseInt(tr.querySelector('.qi').value)||1),p=prods.find(x=>x.sku===sku),pu=gp(p,q);document.getElementById(id+'u').textContent=p?f(pu):'—';document.getElementById(id+'t').textContent=p?gt2(q):'';document.getElementById(id+'T').textContent=p?f(pu*q):'—';calc();}
 function delR(id){const e=document.getElementById(id);if(e)e.remove();calc();}
-function calc(){
-  let s=0,c=0;
-  document.querySelectorAll('#ib tr').forEach(tr=>{
-    const sku=tr.querySelector('.ss')?.value,q=Math.max(1,parseInt(tr.querySelector('.qi')?.value)||0),p=prods.find(x=>x.sku===sku);
-    if(p&&sku){s+=gp(p,q)*q;c++;}
-  });
-  document.getElementById('gt').textContent=f(s);
-  document.getElementById('tc').textContent=c+(c===1?' item selecionado':' itens selecionados');
-}
+function calc(){let s=0,c=0;document.querySelectorAll('#ib tr').forEach(tr=>{const sku=tr.querySelector('.ss')?.value,q=Math.max(1,parseInt(tr.querySelector('.qi')?.value)||0),p=prods.find(x=>x.sku===sku);if(p&&sku){s+=gp(p,q)*q;c++;}});document.getElementById('gt').textContent=f(s);document.getElementById('tc').textContent=c+(c===1?' item selecionado':' itens selecionados');}
 function clearAll(){if(!confirm('Limpar toda a cotação?'))return;document.getElementById('ib').innerHTML='';['cn','cw','ce','cv'].forEach(id=>document.getElementById(id).value='');rc=0;addRow();calc();}
-function getItems(){
-  const r=[];
-  document.querySelectorAll('#ib tr').forEach(tr=>{
-    const sku=tr.querySelector('.ss')?.value,q=Math.max(1,parseInt(tr.querySelector('.qi')?.value)||0),obs=tr.querySelector('.oi')?.value||'',p=prods.find(x=>x.sku===sku);
-    if(p&&sku)r.push({p,q,obs,pu:gp(p,q),tot:gp(p,q)*q});
-  });
-  return r;
-}
+function getItems(){const r=[];document.querySelectorAll('#ib tr').forEach(tr=>{const sku=tr.querySelector('.ss')?.value,q=Math.max(1,parseInt(tr.querySelector('.qi')?.value)||0),obs=tr.querySelector('.oi')?.value||'',p=prods.find(x=>x.sku===sku);if(p&&sku)r.push({p,q,obs,pu:gp(p,q),tot:gp(p,q)*q});});return r;}
 
-// WHATSAPP — mensagem curta e elegante
 function sendWpp(){
   const nome=document.getElementById('cn').value||'';
   const wpp=document.getElementById('cw').value||'';
   const saudacao=nome?`Olá, ${nome.split(' ')[0]}!`:'Olá!';
-  const lines=[
-    `✦ ${saudacao}`,
-    '',
-    'Segue sua cotação Frenesi Club em anexo 🖤',
-    '',
-    'Qualquer dúvida, estou à disposição!',
-    '',
-    INSTA
-  ];
-  const msg=lines.join('\n');
+  const msg=`✦ ${saudacao}\n\nSegue sua cotação Frenesi Club em anexo 🖤\n\nQualquer dúvida, estou à disposição!\n\n${INSTA}`;
   const num=wpp.replace(/\D/g,'');
-  const dest=num?'55'+num:'';
-  const url=dest?`https://wa.me/${dest}?text=${encodeURIComponent(msg)}`:`https://wa.me/?text=${encodeURIComponent(msg)}`;
+  const url=num?`https://wa.me/55${num}?text=${encodeURIComponent(msg)}`:`https://wa.me/?text=${encodeURIComponent(msg)}`;
   window.open(url,'_blank');
 }
 
-// PDF — dark brand
-function genPdf(){
+function buildPdfHtml(num){
   const nome=document.getElementById('cn').value||'—';
   const wpp=document.getElementById('cw').value||'—';
   const email=document.getElementById('ce').value||'—';
   const evento=document.getElementById('cv').value||'—';
   const total=document.getElementById('gt').textContent;
   const items=getItems();
+  const rowsHtml=items.map(({p,q,obs,pu,tot},i)=>`
+    <tr class="${i%2===0?'roweven':'rowodd'}">
+      <td class="pit-num">${i+1}</td>
+      <td><div class="pit-sku">${p.sku}</div><div class="pit-name">${p.nome}</div>${obs?`<div class="pit-obs">${obs}</div>`:''}</td>
+      <td class="pit-qty">${q}</td>
+      <td class="pit-right">${f(pu)}</td>
+      <td class="pit-right" style="color:#c8a96e">${f(tot)}</td>
+    </tr>`).join('');
+  return`
+  <div class="ph">
+    <div class="ph-star-deco">✦</div>
+    <div class="ph-top">
+      <div>
+        <div class="ph-logo">frenesi</div>
+        <div class="ph-club">✦ &nbsp; C L U B</div>
+        <div class="ph-tag">Bottons Artesanais & Personalizados</div>
+      </div>
+      <div class="ph-right">
+        <div class="ph-cotlabel">Cotação Nº</div>
+        <div class="ph-cotnum">${num}</div>
+        <div class="ph-date">${td()}</div>
+      </div>
+    </div>
+    <div class="ph-line"></div>
+  </div>
+  <div class="pb">
+    <div class="ps">Dados do Cliente</div>
+    <div class="pcg">
+      <div class="pcf"><div class="pfl">Nome / Empresa</div><div class="pfv">${nome}</div></div>
+      <div class="pcf"><div class="pfl">WhatsApp</div><div class="pfv">${wpp}</div></div>
+      <div class="pcf"><div class="pfl">E-mail</div><div class="pfv">${email}</div></div>
+      <div class="pcf"><div class="pfl">Evento / Ocasião</div><div class="pfv">${evento}</div></div>
+    </div>
+    <div class="ps">Itens da Cotação</div>
+    <table class="pit">
+      <thead><tr><th style="width:36px">#</th><th>Produto</th><th style="width:52px;text-align:center">Qtd.</th><th style="width:90px;text-align:right">Unit.</th><th style="width:90px;text-align:right">Total</th></tr></thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+    <div class="ptb">
+      <div><div class="ptb-label">Total Geral</div><div class="ptb-count">${items.length} ${items.length===1?'item':'itens'}</div></div>
+      <div class="ptb-val">${total}</div>
+    </div>
+    <div class="pval">⏱ &nbsp;Esta cotação tem validade de <strong>7 dias</strong> a partir da data de emissão. Preços sujeitos a alteração após este prazo.</div>
+    <div class="pobs"><strong>Observações gerais:</strong>Artes para personalização devem ser enviadas em alta resolução (PNG ou PDF). Prazo de produção a confirmar após aprovação do pedido.</div>
+  </div>
+  <div class="pft">
+    <div><div class="pft-brand">frenesi club</div><div class="pft-sub">Bottons Artesanais & Personalizados</div></div>
+    <div class="pft-contact"><div class="pft-insta">${INSTA}</div><div class="pft-site">${SITE}</div></div>
+  </div>
+  <div class="pft-stars">✦ &nbsp; ✦ &nbsp; ✦</div>`;
+}
+
+function genPdf(){
+  const items=getItems();
   if(items.length===0){toast('Adicione ao menos um produto antes de gerar o PDF.');return;}
   const num=getCotNum();
-  const rowsHtml=items.map(({p,q,obs,pu,tot},i)=>`
-    <tr class="${i%2===0?'even':'odd'}">
-      <td class="pit-num" style="width:36px">${i+1}</td>
-      <td><div class="pit-sku">${p.sku}</div><div class="pit-name">${p.nome}</div>${obs?`<div class="pit-obs">Obs: ${obs}</div>`:''}</td>
-      <td style="text-align:center;width:52px;color:#888">${q}</td>
-      <td class="pit-right" style="width:90px">${f(pu)}</td>
-      <td class="pit-right" style="width:90px;color:#c8a96e">${f(tot)}</td>
-    </tr>`).join('');
-
-  document.getElementById('pdfdoc').innerHTML=`
-  <div class="pdf-page">
-    <div class="ph">
-      <div class="ph-star">✦</div>
-      <div class="ph-top">
-        <div>
-          <div class="ph-logo">frenesi</div>
-          <div class="ph-club">✦ &nbsp; C L U B</div>
-          <div class="ph-tag">Bottons Artesanais & Personalizados</div>
-        </div>
-        <div class="ph-right">
-          <div class="ph-cotlabel">Cotação Nº</div>
-          <div class="ph-cotnum">${num}</div>
-          <div class="ph-date">${td()}</div>
-        </div>
-      </div>
-      <div class="ph-line"></div>
-    </div>
-
-    <div class="pb">
-      <div class="ps">Dados do Cliente</div>
-      <div class="pcg">
-        <div class="pcf"><div class="pfl">Nome / Empresa</div><div class="pfv">${nome}</div></div>
-        <div class="pcf"><div class="pfl">WhatsApp</div><div class="pfv">${wpp}</div></div>
-        <div class="pcf"><div class="pfl">E-mail</div><div class="pfv">${email}</div></div>
-        <div class="pcf"><div class="pfl">Evento / Ocasião</div><div class="pfv">${evento}</div></div>
-      </div>
-
-      <div class="ps">Itens da Cotação</div>
-      <table class="pit">
-        <thead><tr>
-          <th style="width:36px">#</th>
-          <th>Produto</th>
-          <th style="width:52px;text-align:center">Qtd.</th>
-          <th style="width:90px;text-align:right">Unit.</th>
-          <th style="width:90px;text-align:right">Total</th>
-        </tr></thead>
-        <tbody>${rowsHtml}</tbody>
-      </table>
-
-      <div class="ptb">
-        <div>
-          <div class="ptb-label">Total Geral</div>
-          <div class="ptb-count">${items.length} ${items.length===1?'item':'itens'}</div>
-        </div>
-        <div class="ptb-val">${total}</div>
-      </div>
-
-      <div class="pval">⏱ &nbsp;Esta cotação tem validade de <strong>7 dias</strong> a partir da data de emissão. Preços sujeitos a alteração após este prazo.</div>
-
-      <div class="pobs">
-        <strong>Observações gerais:</strong>
-        Artes para personalização devem ser enviadas em alta resolução (PNG ou PDF). Prazo de produção a confirmar após aprovação do pedido.
-      </div>
-    </div>
-
-    <div class="pft">
-      <div>
-        <div class="pft-brand">frenesi club</div>
-        <div class="pft-sub">Bottons Artesanais & Personalizados</div>
-      </div>
-      <div class="pft-contact">
-        <div class="pft-insta">${INSTA}</div>
-        <div>${SITE}</div>
-      </div>
-    </div>
-    <div class="psd">✦ &nbsp; ✦ &nbsp; ✦</div>
-  </div>`;
-
+  const html=buildPdfHtml(num);
+  document.getElementById('pdfdoc').innerHTML=html;
+  document.getElementById('pdfdoc-print').innerHTML=html;
   document.getElementById('pov').classList.remove('hidden');
 }
 function closePdf(){document.getElementById('pov').classList.add('hidden');}
-function printPdf(){window.print();}
-
-// ADMIN
-function renderProds(){
-  const g=document.getElementById('pg');
-  document.getElementById('pc').textContent=prods.length;
-  if(!g)return;
-  g.innerHTML=prods.map((p,i)=>`<div class="pc"><div class="psk">✦ ${p.sku}</div><div class="pnm">${p.nome}</div><div class="psb">${p.cat} · ${p.tam}</div><div class="ppr"><div class="pp">×1 <span>${f(p.prices[1])}</span></div><div class="pp">×10 <span>${f(p.prices[10])}</span></div><div class="pp">×100 <span>${f(p.prices[100])}</span></div></div><div class="pa"><button class="btn sec sm" onclick="editP(${i})">Editar</button><button class="db" onclick="delP(${i})">Remover</button></div></div>`).join('');
+function printPdf(){
+  document.getElementById('print-target').style.display='block';
+  window.print();
+  setTimeout(()=>{document.getElementById('print-target').style.display='none';},1000);
 }
+
+function renderProds(){const g=document.getElementById('pg');document.getElementById('pc').textContent=prods.length;if(!g)return;g.innerHTML=prods.map((p,i)=>`<div class="pc"><div class="psk">✦ ${p.sku}</div><div class="pnm">${p.nome}</div><div class="psb">${p.cat} · ${p.tam}</div><div class="ppr"><div class="pp">×1 <span>${f(p.prices[1])}</span></div><div class="pp">×10 <span>${f(p.prices[10])}</span></div><div class="pp">×100 <span>${f(p.prices[100])}</span></div></div><div class="pa"><button class="btn sec sm" onclick="editP(${i})">Editar</button><button class="db" onclick="delP(${i})">Remover</button></div></div>`).join('');}
 function showForm(){['fsk','fnm','fct','ftm','p1','p3','p5','p10','p50','p100'].forEach(id=>document.getElementById(id).value='');document.getElementById('fidx').value='';document.getElementById('fl').textContent='Novo Produto';document.getElementById('af').style.display='block';document.getElementById('af').scrollIntoView({behavior:'smooth'});}
 function hideForm(){document.getElementById('af').style.display='none';}
 function editP(i){const p=prods[i];document.getElementById('fsk').value=p.sku;document.getElementById('fnm').value=p.nome;document.getElementById('fct').value=p.cat;document.getElementById('ftm').value=p.tam;['1','3','5','10','50','100'].forEach(k=>document.getElementById('p'+k).value=p.prices[k]||'');document.getElementById('fidx').value=i;document.getElementById('fl').textContent='Editar Produto';document.getElementById('af').style.display='block';document.getElementById('af').scrollIntoView({behavior:'smooth'});}
-function saveProd(){
-  const sku=document.getElementById('fsk').value.trim().toUpperCase(),nome=document.getElementById('fnm').value.trim();
-  if(!sku||!nome){toast('SKU e Nome são obrigatórios.');return;}
-  const p={sku,nome,cat:document.getElementById('fct').value.trim(),tam:document.getElementById('ftm').value.trim(),prices:{1:parseFloat(document.getElementById('p1').value)||0,3:parseFloat(document.getElementById('p3').value)||0,5:parseFloat(document.getElementById('p5').value)||0,10:parseFloat(document.getElementById('p10').value)||0,50:parseFloat(document.getElementById('p50').value)||0,100:parseFloat(document.getElementById('p100').value)||0}};
-  const idx=document.getElementById('fidx').value;
-  if(idx!=='')prods[parseInt(idx)]=p;else prods.push(p);
-  sp();renderProds();hideForm();toast(idx!==''?'Produto atualizado!':'Produto cadastrado!');
-}
+function saveProd(){const sku=document.getElementById('fsk').value.trim().toUpperCase(),nome=document.getElementById('fnm').value.trim();if(!sku||!nome){toast('SKU e Nome são obrigatórios.');return;}const p={sku,nome,cat:document.getElementById('fct').value.trim(),tam:document.getElementById('ftm').value.trim(),prices:{1:parseFloat(document.getElementById('p1').value)||0,3:parseFloat(document.getElementById('p3').value)||0,5:parseFloat(document.getElementById('p5').value)||0,10:parseFloat(document.getElementById('p10').value)||0,50:parseFloat(document.getElementById('p50').value)||0,100:parseFloat(document.getElementById('p100').value)||0}};const idx=document.getElementById('fidx').value;if(idx!=='')prods[parseInt(idx)]=p;else prods.push(p);sp();renderProds();hideForm();toast(idx!==''?'Produto atualizado!':'Produto cadastrado!');}
 function delP(i){if(!confirm('Remover "'+prods[i].nome+'"?'))return;prods.splice(i,1);sp();renderProds();toast('Produto removido.');}
 </script>
 </body>
